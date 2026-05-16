@@ -1,9 +1,9 @@
 ---
 name: anti-backrooms-design
-description: Review and improve visual, spatial, and user-facing artifacts for coherent-but-wrong design failures that violate human normalcy: wrong scale, impossible adjacency, unreadable hierarchy, duplicated patterns, meta leakage, and broken viewer flow. Always use this skill when creating or critiquing UI, decks, diagrams, docs, PDFs, signage, booths, or other layouts where local plausibility can hide global incoherence.
+description: Review and improve visual, spatial, and user-facing artifacts for coherent-but-wrong design failures that violate human normalcy including wrong scale, impossible adjacency, unreadable hierarchy, duplicated patterns, meta leakage, and broken viewer flow. Always use this skill when creating or critiquing UI, decks, diagrams, docs, PDFs, signage, booths, or other layouts where local plausibility can hide global incoherence.
 metadata:
   author: Leeor Nahum
-  version: "1.1.0"
+  version: "1.1.1"
 ---
 
 # Anti-Backrooms Design
@@ -16,7 +16,7 @@ Use this skill to avoid building artifacts that feel like a no-clipped average o
 
 The core test is simple: do not only ask whether each part is valid. Ask whether the whole artifact makes sense for a real human to inhabit, read, scan, click, project, print, or physically approach.
 
-In Leeor's shorthand, the artifact should not `violate` the laws of human normalcy. A violation can be subtle: everything may be locally plausible, but the whole thing feels robotic, backrooms-like, or wrong for the actual viewer path.
+The guiding principle is that the artifact should not `violate` the laws of human normalcy. A violation can be subtle: everything may be locally plausible, but the whole thing feels robotic, backrooms-like, or wrong for the actual viewer path.
 
 ## Quick Start
 
