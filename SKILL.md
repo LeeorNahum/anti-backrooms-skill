@@ -3,7 +3,7 @@ name: anti-backrooms-design
 description: Review and improve visual, spatial, and user-facing artifacts for coherent-but-wrong design failures that violate human normalcy including wrong scale, impossible adjacency, unreadable hierarchy, duplicated patterns, meta leakage, and broken viewer flow. Always use this skill when creating or critiquing UI, decks, diagrams, docs, PDFs, signage, booths, or other layouts where local plausibility can hide global incoherence.
 metadata:
   author: Leeor Nahum
-  version: "1.2.0"
+  version: "1.3.0"
 ---
 
 # Anti-Backrooms Design
@@ -53,6 +53,9 @@ Inspect every artifact through these lenses:
 - **Proper-noun leakage:** real names, project names, repo names, source labels, or personal context appear where a generic artifact should use placeholders or audience-facing language.
 - **Negative-anchor leakage:** the artifact warns against bad examples by naming them, accidentally making the bad pattern more likely to be copied.
 - **Reference infection:** appendix, source notes, examples, or implementation details leak into the main artifact instead of staying in their proper supporting place.
+- **Example anchoring:** an example offered only to illustrate a point gets lifted verbatim as the answer, fixing a name, value, or wording the reader should have chosen for their own case. Even a good example anchors.
+- **Wrong-frame labeling:** a term that is accurate in one frame, such as an internal layer, a single stage, or the author's own vocabulary, is used on a surface read from a different frame, where it is wrong, ambiguous, or unreadable. Locally correct, globally misnamed.
+- **Maintainer residue:** build, sync, versioning, or editing instructions for the artifact live inside the copy the audience consumes, instead of a separate maintainer layer.
 
 ## Backrooms Mapping
 
@@ -63,8 +66,11 @@ Use these mappings while composing, not only after:
 - **Endless hum-buzz:** helper text, badges, labels, footnotes, and low-value explanations create ambient noise. Make the artifact quieter so the signal dominates.
 - **Non-Euclidean geometry:** the order is locally navigable but globally wrong. The artifact seems to conclude, then restarts; main story and appendix bleed together; diagrams read in loops. Reset the path.
 - **Wrong scale:** text, whitespace, diagrams, controls, or physical placements are sized for the canvas, not the real viewer, room, print, device, or hand.
-- **Duplication / replacement:** sections repeat the same beat with slightly different wording, or cloned modules drift without reason. Collapse duplicates or give each repeated structure a distinct job.
+- **Duplication / replacement:** sections repeat the same beat with slightly different wording, or cloned modules drift without reason. A copy that imitates a real element but comes out subtly malformed is worse than none. Collapse duplicates, give each repeated structure a distinct job, and make a near-copy either the real thing or gone.
 - **Observer effect:** the artifact survives a static skim but breaks when you imagine actually using it. Simulate the real interaction sequence, not just the screenshot.
+- **Memory of a memory:** the artifact is assembled from a degraded copy of a copy rather than the real source, an echo reproduced from imperfect or compacted recall, so it feels familiar but is subtly wrong throughout. Rebuild from the true source, not from a remembered version of it.
+- **Doorless entry:** a view, modal, toast, or state appears with no designed way in, as if the user fell into it through a wall. Give every screen and overlay an intentional, explainable trigger, and remove any that surface for no reason.
+- **Shifting on reentry:** a page, modal, or view behaves differently each time the user returns, so its state never settles. Keep state stable and predictable on return; any change should trace to a user action, not to the space rearranging itself.
 
 ## Biggest AI Mistakes
 
@@ -79,43 +85,44 @@ Catch these before they harden:
 
 When this skill is active:
 
-- think ahead while composing; do not postpone obvious contradictions
-- prefer deleting weak or suspicious elements over defending them
-- if a choice feels arbitrary, ask what user, task, or space constraint justifies it
-- if a label smells internal, remove it or ask before shipping it
-- if a generic artifact contains a real person's name, repo name, local path, chat artifact, or source-specific proper noun, remove it unless that identity is truly part of the audience-facing artifact
-- do not mention bad or deprecated examples inside the final artifact unless the artifact is explicitly a critique or training guide where the example is needed
-- verify readability in the real medium instead of assuming it from the canvas
-- keep mainline narrative separate from appendix or reference material
-- if something only works because the viewer already knows the backstory, it is not solved
+- Think ahead while composing; do not postpone obvious contradictions
+- Prefer deleting weak or suspicious elements over defending them
+- If a choice feels arbitrary, ask what user, task, or space constraint justifies it
+- If a label smells internal, remove it or ask before shipping it
+- If a generic artifact contains a real person's name, repo name, local path, chat artifact, or source-specific proper noun, remove it unless that identity is truly part of the audience-facing artifact
+- Do not mention bad or deprecated examples inside the final artifact unless the artifact is explicitly a critique or training guide where the example is needed
+- Verify readability in the real medium instead of assuming it from the canvas
+- Keep mainline narrative separate from appendix or reference material
+- Keep instructions for maintaining the artifact out of the copy the audience consumes
+- If something only works because the viewer already knows the backstory, it is not solved
 
 ## Correction Patterns
 
 When the artifact feels like an impossible corridor, reset the path:
 
-- define the true start
-- define the true end
-- map the minimum beats in between
-- cut anything not on the main path or clearly marked as appendix/reference
+- Define the true start
+- Define the true end
+- Map the minimum beats in between
+- Cut anything not on the main path or clearly marked as appendix/reference
 
 When scale or placement feels abstract, re-ground in physics:
 
-- specify viewer distance
-- specify device size, print size, room scale, or physical approach path
-- specify whether the artifact is scanned, projected, held, skimmed, clicked, or navigated
-- resize and reprioritize based on those constraints
+- Specify viewer distance
+- Specify device size, print size, room scale, or physical approach path
+- Specify whether the artifact is scanned, projected, held, skimmed, clicked, or navigated
+- Resize and reprioritize based on those constraints
 
 When content feels contaminated or generic, re-ground in audience:
 
-- identify the real audience
-- remove anything they would never need to see
-- replace process labels with audience-relevant language
+- Identify the real audience
+- Remove anything they would never need to see
+- Replace process labels with audience-relevant language
 
 When repetition or decorative noise takes over, re-ground in purpose:
 
-- state the artifact's job in one sentence
-- justify every section against that job
-- delete anything whose role cannot be defended quickly
+- State the artifact's job in one sentence
+- Justify every section against that job
+- Delete anything whose role cannot be defended quickly
 
 ## Review Workflow
 
@@ -131,15 +138,16 @@ Think a few moves ahead. Avoid constructing a maze that technically connects but
 
 ## Good Antidotes
 
-- pick one clear primary path for the viewer
-- choose fewer, stronger visual moves
-- size for the real viewing context, not the canvas
-- separate main narrative from reference material
-- replace generic repetition with explicit information hierarchy
-- remove meta text, planning residue, and environmental contamination
-- replace leaked real-world names and local context with placeholders, audience-facing labels, or nothing
-- describe categories of bad patterns instead of naming bad examples that could become anchors
-- ask the user when a suspicious choice could be intentional but cannot be justified confidently
+- Pick one clear primary path for the viewer
+- Choose fewer, stronger visual moves
+- Size for the real viewing context, not the canvas
+- Separate main narrative from reference material
+- Replace generic repetition with explicit information hierarchy
+- Remove meta text, planning residue, and environmental contamination
+- Replace leaked real-world names and local context with placeholders, audience-facing labels, or nothing
+- Describe categories of bad patterns instead of naming bad examples that could become anchors
+- Use examples to show shape or structure, and signal that the reader chooses the accurate specifics for their own case
+- Ask the user when a suspicious choice could be intentional but cannot be justified confidently
 
 ## Compact Anti-Examples
 
@@ -164,6 +172,7 @@ When in doubt, ask:
 - Does the artifact already know where it should end?
 - Is any important element only working because I am zoomed in or because I know hidden context?
 - If a stranger walked into this with no backstory, would it still feel coherent?
+- Does every name read correctly from the viewer's frame, not just the author's?
 
 ## Response Format
 
