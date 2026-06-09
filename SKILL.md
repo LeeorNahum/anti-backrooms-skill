@@ -1,8 +1,8 @@
 ---
-name: anti-backrooms-design
-description: Review and improve visual, spatial, and user-facing artifacts for coherent-but-wrong design failures that violate human normalcy including wrong scale, impossible adjacency, unreadable hierarchy, duplicated patterns, meta leakage, and broken viewer flow. Always use this skill when creating or critiquing UI, decks, diagrams, docs, PDFs, signage, booths, or other layouts where local plausibility can hide global incoherence.
+name: "anti-backrooms-design"
+description: "Review and improve visual, spatial, and user-facing artifacts for coherent-but-wrong design failures that violate human normalcy including wrong scale, impossible adjacency, unreadable hierarchy, duplicated patterns, meta leakage, and broken viewer flow. Always use this skill when creating or critiquing UI, decks, diagrams, docs, PDFs, signage, booths, or other layouts where local plausibility can hide global incoherence."
 metadata:
-  author: Leeor Nahum
+  author: "Leeor Nahum"
   version: "1.3.0"
 ---
 
