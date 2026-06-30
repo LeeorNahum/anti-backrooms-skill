@@ -3,7 +3,7 @@ name: "anti-backrooms"
 description: "Review and improve visual, spatial, textual, and user-facing artifacts for coherent-but-wrong failures that violate human normalcy, including nonsensical wording, unsupported claims, wrong scale, impossible adjacency, unreadable hierarchy, duplicated patterns, meta leakage, and broken viewer flow. Always use this skill when creating or critiquing UI, decks, diagrams, docs, PDFs, signage, booths, copy, or other artifacts where local plausibility can hide global incoherence."
 metadata:
   author: "Leeor Nahum"
-  version: "1.4.0"
+  version: "1.5.0"
 ---
 
 # Anti-Backrooms
@@ -61,6 +61,8 @@ Inspect every artifact through these lenses:
 - **Reference infection:** appendix, source notes, examples, or implementation details leak into the main artifact instead of staying in their proper supporting place.
 - **Example anchoring:** an example offered only to illustrate a point gets lifted verbatim as the answer, fixing a name, value, or wording the reader should have chosen for their own case. Even a good example anchors.
 - **Wrong-frame labeling:** a term that is accurate in one frame, such as an internal layer, a single stage, or the author's own vocabulary, is used on a surface read from a different frame, where it is wrong, ambiguous, or unreadable. Locally correct, globally misnamed.
+- **Contract-instance enumeration:** a description states a general capability, then lists specific cases the general statement already covers. The list carries no new information and quietly narrows the reader to the named cases. State the contract and its real boundaries, never examples of what it already includes.
+- **False breadth:** a surface presented as general, such as a universal verb, label, field, or component, names a specific product, place, file, format, or vendor it merely happens to serve, so the generic promise collapses to one context. Keep a general surface general; the specific case belongs where that context is owned.
 - **Maintainer residue:** build, sync, versioning, or editing instructions for the artifact live inside the copy the audience consumes, instead of a separate maintainer layer.
 
 ## Backrooms Mapping
@@ -160,6 +162,8 @@ Think a few moves ahead. Avoid constructing a maze that technically connects but
 - Replace leaked real-world names and local context with placeholders, audience-facing labels, or nothing
 - Describe categories of bad patterns instead of naming bad examples that could become anchors
 - Use examples to show shape or structure, and signal that the reader chooses the accurate specifics for their own case
+- Describe a capability by its contract and its real limits, never by enumerating instances the general statement already covers
+- Keep a surface meant to be general free of any specific product, place, file, or format it merely happens to serve
 - Ask the user when a suspicious choice could be intentional but cannot be justified confidently
 
 ## Compact Anti-Examples
@@ -177,6 +181,8 @@ These are pattern categories, not labels to copy into final artifacts:
 - Document has generic section inventory instead of information architecture -> organize around decisions, tasks, proofs, and audience needs.
 - Flow diagram has correct nodes but no reading order -> add explicit start, direction, hierarchy, and traversal path.
 - Physical table, booth, or sign is composed like a flat screen -> design from real sightlines, approach, reach, and crowd behavior.
+- A general capability's description enumerates cases it already covers -> state the contract and its limits, and drop the list.
+- A surface meant to be universal names one product, place, file, or format it serves -> use general language, and move the specific case to the context that owns it.
 
 ## Fast Review Prompt
 
