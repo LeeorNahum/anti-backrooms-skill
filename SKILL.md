@@ -3,7 +3,7 @@ name: "anti-backrooms"
 description: "Review and improve visual, spatial, textual, and user-facing artifacts for coherent-but-wrong failures that violate human normalcy, including nonsensical wording, unsupported claims, wrong scale, impossible adjacency, unreadable hierarchy, duplicated patterns, meta leakage, and broken viewer flow. Always use this skill when creating or critiquing UI, decks, diagrams, docs, PDFs, signage, booths, copy, or other artifacts where local plausibility can hide global incoherence."
 metadata:
   author: "Leeor Nahum"
-  version: "1.5.0"
+  version: "1.6.0"
 ---
 
 # Anti-Backrooms
@@ -55,6 +55,8 @@ Inspect every artifact through these lenses:
 - **Meta leakage:** placeholders, repo terms, process labels, or internal planning language leak into the final artifact.
 - **Context suction:** nearby but irrelevant context contaminates wording, structure, or aesthetics.
 - **Repetition without meaning:** repeated cards, sections, slides, phrases, or visual moves add noise instead of clarity.
+- **Inert fact:** a field, value, or card is shown that the viewer can neither act on nor needs to know right now, present only because the data existed and a slot was available. If removing it costs the viewer nothing, it should not have been shown.
+- **Duplicate truth:** the same fact is rendered twice on one screen in two different words or components, a status word in the header and again in a nested panel, so the viewer scans past what looks like new information and finds the header repeated.
 - **Human-path failure:** a person moving through the artifact would not know where to look, what to do, or when the story ends.
 - **Proper-noun leakage:** real names, project names, repo names, source labels, or personal context appear where a generic artifact should use placeholders or audience-facing language.
 - **Negative-anchor leakage:** the artifact warns against bad examples by naming them, accidentally making the bad pattern more likely to be copied.
@@ -164,6 +166,8 @@ Think a few moves ahead. Avoid constructing a maze that technically connects but
 - Use examples to show shape or structure, and signal that the reader chooses the accurate specifics for their own case
 - Describe a capability by its contract and its real limits, never by enumerating instances the general statement already covers
 - Keep a surface meant to be general free of any specific product, place, file, or format it merely happens to serve
+- Remove a fact the viewer cannot act on and does not need to decide anything
+- Show a fact exactly once, at the level where it is first noticed, and let a nested view show only what is new
 - Ask the user when a suspicious choice could be intentional but cannot be justified confidently
 
 ## Compact Anti-Examples
@@ -183,6 +187,8 @@ These are pattern categories, not labels to copy into final artifacts:
 - Physical table, booth, or sign is composed like a flat screen -> design from real sightlines, approach, reach, and crowd behavior.
 - A general capability's description enumerates cases it already covers -> state the contract and its limits, and drop the list.
 - A surface meant to be universal names one product, place, file, or format it serves -> use general language, and move the specific case to the context that owns it.
+- A settings panel shows a raw API host or endpoint URL nobody will type or act on -> drop it, or fold it into the one control that uses it (an "open" link), not display it as a fact.
+- A status already shown in the page header is repeated inside a nested panel below it -> show it once, where it is first noticed, and let the nested panel show only what is new.
 
 ## Fast Review Prompt
 
