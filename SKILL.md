@@ -3,7 +3,7 @@ name: "anti-backrooms"
 description: "Review and improve visual, spatial, textual, and user-facing artifacts for coherent-but-wrong failures that violate human normalcy, including nonsensical wording, unsupported claims, wrong scale, impossible adjacency, unreadable hierarchy, duplicated patterns, meta leakage, and broken viewer flow. Always use this skill when creating or critiquing UI, decks, diagrams, docs, PDFs, signage, booths, copy, or other artifacts where local plausibility can hide global incoherence."
 metadata:
   author: "Leeor Nahum"
-  version: "1.6.0"
+  version: "1.6.1"
 ---
 
 # Anti-Backrooms
@@ -64,7 +64,7 @@ Inspect every artifact through these lenses:
 - **Example anchoring:** an example offered only to illustrate a point gets lifted verbatim as the answer, fixing a name, value, or wording the reader should have chosen for their own case. Even a good example anchors.
 - **Wrong-frame labeling:** a term that is accurate in one frame, such as an internal layer, a single stage, or the author's own vocabulary, is used on a surface read from a different frame, where it is wrong, ambiguous, or unreadable. Locally correct, globally misnamed.
 - **Contract-instance enumeration:** a description states a general capability, then lists specific cases the general statement already covers. The list carries no new information and quietly narrows the reader to the named cases. State the contract and its real boundaries, never examples of what it already includes.
-- **False breadth:** a surface presented as general, such as a universal verb, label, field, or component, names a specific product, place, file, format, or vendor it merely happens to serve, so the generic promise collapses to one context. Keep a general surface general; the specific case belongs where that context is owned.
+- **False breadth:** a surface presented as general, such as a universal verb, label, field, or component, names a specific product, place, file, format, or vendor it merely happens to serve, so the generic promise collapses to one context. Keep a general surface general. The specific case belongs where that context is owned.
 - **Maintainer residue:** build, sync, versioning, or editing instructions for the artifact live inside the copy the audience consumes, instead of a separate maintainer layer.
 
 ## Backrooms Mapping
@@ -74,13 +74,13 @@ Use these mappings while composing, not only after:
 - **Randomly segmented rooms:** sections, cards, folders, slides, or dividers exist because artifacts often have them, not because they create a decision, proof, or transition. Merge or delete segments that do not earn their place.
 - **Mono-yellow sameness:** repeated cards, wording rhythms, UI blocks, or visual moves are consistent but dead. Keep consistency, but add deliberate hierarchy and variation where it clarifies meaning.
 - **Endless hum-buzz:** helper text, badges, labels, footnotes, and low-value explanations create ambient noise. Make the artifact quieter so the signal dominates.
-- **Non-Euclidean geometry:** the order is locally navigable but globally wrong. The artifact seems to conclude, then restarts; main story and appendix bleed together; diagrams read in loops. Reset the path.
+- **Non-Euclidean geometry:** the order is locally navigable but globally wrong. The artifact seems to conclude, then restarts. Main story and appendix bleed together, and diagrams read in loops. Reset the path.
 - **Wrong scale:** text, whitespace, diagrams, controls, or physical placements are sized for the canvas, not the real viewer, room, print, device, or hand.
 - **Duplication / replacement:** sections repeat the same beat with slightly different wording, or cloned modules drift without reason. A copy that imitates a real element but comes out subtly malformed is worse than none. Collapse duplicates, give each repeated structure a distinct job, and make a near-copy either the real thing or gone.
 - **Observer effect:** the artifact survives a static skim but breaks when you imagine actually using it. Simulate the real interaction sequence, not just the screenshot.
 - **Memory of a memory:** the artifact is assembled from a degraded copy of a copy rather than the real source, an echo reproduced from imperfect or compacted recall, so it feels familiar but is subtly wrong throughout. Rebuild from the true source, not from a remembered version of it.
 - **Doorless entry:** a view, modal, toast, or state appears with no designed way in, as if the user fell into it through a wall. Give every screen and overlay an intentional, explainable trigger, and remove any that surface for no reason.
-- **Shifting on reentry:** a page, modal, or view behaves differently each time the user returns, so its state never settles. Keep state stable and predictable on return; any change should trace to a user action, not to the space rearranging itself.
+- **Shifting on reentry:** a page, modal, or view behaves differently each time the user returns, so its state never settles. Keep state stable and predictable on return. Any change should trace to a user action, not to the space rearranging itself.
 
 ## Biggest AI Mistakes
 
@@ -95,8 +95,8 @@ Catch these before they harden:
 
 When this skill is active:
 
-- Think ahead while composing; do not postpone obvious contradictions
-- Read text for meaning, not just grammar; make sure adjacent statements agree and the full message can be paraphrased plainly
+- Think ahead while composing. Do not postpone obvious contradictions
+- Read text for meaning, not just grammar. Make sure adjacent statements agree and the full message can be paraphrased plainly
 - Replace fluent but empty wording with specific audience-facing information
 - Keep claims proportionate to the evidence shown
 - Prefer deleting weak or suspicious elements over defending them
