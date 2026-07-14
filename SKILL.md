@@ -3,7 +3,7 @@ name: "anti-backrooms"
 description: "Review and improve visual, spatial, textual, and user-facing artifacts for coherent-but-wrong failures that violate human normalcy, including nonsensical wording, unsupported claims, wrong scale, impossible adjacency, unreadable hierarchy, duplicated patterns, meta leakage, and broken viewer flow. Always use this skill when creating or critiquing UI, decks, diagrams, docs, PDFs, signage, booths, copy, or other artifacts where local plausibility can hide global incoherence."
 metadata:
   author: "Leeor Nahum"
-  version: "1.6.1"
+  version: "1.6.2"
 ---
 
 # Anti-Backrooms
@@ -56,7 +56,7 @@ Inspect every artifact through these lenses:
 - **Context suction:** nearby but irrelevant context contaminates wording, structure, or aesthetics.
 - **Repetition without meaning:** repeated cards, sections, slides, phrases, or visual moves add noise instead of clarity.
 - **Inert fact:** a field, value, or card is shown that the viewer can neither act on nor needs to know right now, present only because the data existed and a slot was available. If removing it costs the viewer nothing, it should not have been shown.
-- **Duplicate truth:** the same fact is rendered twice on one screen in two different words or components, a status word in the header and again in a nested panel, so the viewer scans past what looks like new information and finds the header repeated.
+- **Duplicate truth:** the same fact is rendered twice on one screen in two different words or components, beside itself in one header row or repeated from the header inside a nested panel, so the viewer scans past what looks like new information and finds the same fact again. Adjacent duplicates hide best: two differently styled chips inches apart read as two facts.
 - **Human-path failure:** a person moving through the artifact would not know where to look, what to do, or when the story ends.
 - **Proper-noun leakage:** real names, project names, repo names, source labels, or personal context appear where a generic artifact should use placeholders or audience-facing language.
 - **Negative-anchor leakage:** the artifact warns against bad examples by naming them, accidentally making the bad pattern more likely to be copied.
