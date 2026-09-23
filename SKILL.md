@@ -1,9 +1,9 @@
 ---
 name: "anti-backrooms"
-description: "Use whenever anything is written, edited, named, or shown that a person or another agent will read or look at, including every visual, spatial, or printed artifact and equally the surfaces that do not look like design work: comments, commit messages, names, reusable instructions, and the prose beside configuration. Apply while composing, not only when a critique is asked for. It catches output that is locally plausible but globally wrong, the coherent-but-wrong failures that violate human normalcy: filler wording, claims stronger than their evidence, wrong scale, impossible adjacency, unreadable hierarchy, meaningless repetition, the same fact shown twice, leaked internal context or session evidence, a generic artifact shaped by one person, and a viewer with no path through it."
+description: "Use whenever anything is written, edited, named, or shown that a person or another agent will read or look at, including every visual, spatial, or printed artifact and equally the surfaces that do not look like design work: comments, commit messages, names, reusable instructions, and the prose beside configuration. Apply while composing, not only when a critique is asked for. It catches output that is locally plausible but globally wrong, the coherent-but-wrong failures that violate human normalcy: filler wording, claims stronger than their evidence, wrong scale, impossible adjacency, unreadable hierarchy, meaningless repetition, the same fact shown twice, a context leak of internal material or session evidence, a generic artifact shaped by one person, and a viewer with no path through it."
 metadata:
   author: "Leeor Nahum"
-  version: "1.7.0"
+  version: "1.8.0"
 ---
 
 # Anti-Backrooms
@@ -56,6 +56,7 @@ Inspect every artifact through these lenses:
 - **Impossible adjacency:** elements sit together because the model can place them there, not because a user expects them there.
 - **Meta leakage:** placeholders, repo terms, process labels, or internal planning language leak into the final artifact.
 - **Context suction:** nearby but irrelevant context contaminates wording, structure, or aesthetics.
+- **Context leak:** the plain name for meta leakage and context suction together: a piece of the prompt, the research, the plan, or the session ends up inside an artifact where it does not belong.
 - **Repetition without meaning:** repeated cards, sections, slides, phrases, or visual moves add noise instead of clarity.
 - **Inert fact:** a field, value, or card is shown that the viewer can neither act on nor needs to know right now, present only because the data existed and a slot was available. If removing it costs the viewer nothing, it should not have been shown.
 - **Duplicate truth:** the same fact is rendered twice on one screen in two different words or components, beside itself in one header row or repeated from the header inside a nested panel, so the viewer scans past what looks like new information and finds the same fact again. Adjacent duplicates hide best: two differently styled chips inches apart read as two facts.
