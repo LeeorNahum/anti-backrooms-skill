@@ -6,7 +6,7 @@ Rules for editing this skill. User-facing guidance lives in `SKILL.md`. `README.
 
 | File | Role |
 | --- | --- |
-| `SKILL.md` | The review method, failure modes, correction patterns, and response format |
+| `SKILL.md` | The review method, failure modes, correction patterns, and review table |
 | `README.md` | Short human summary |
 
 ## Editing
@@ -15,15 +15,16 @@ Rules for editing this skill. User-facing guidance lives in `SKILL.md`. `README.
 - Keep it generic and placeholder-only. No real product, vendor, project, repo, file, or path names belong in `SKILL.md` or `README.md`. This is a methodology, not tied to any one codebase.
 - Describe categories of failure, never named bad examples. A quoted bad example is itself a negative anchor, the exact violation this skill hunts. State the pattern abstractly so it cannot be copied.
 - Keep `SKILL.md` direct and short. Prefer deleting a line over softening it, and prefer the smallest edit in an existing section over a new section, since redundant sections are a failure this skill hunts.
+- State each failure once, in Failure Modes To Hunt, with its fix. Default Behaviors, Good Antidotes, and Compact Anti-Examples add what that statement lacks, never an echo of it.
 - Preserve the high-signal wording and the Backrooms metaphor. Do not flatten distinctive language into generic process language.
-- Bump `metadata.version` with semver whenever behavior or coverage changes, in the same edit.
+- Bump `metadata.version` by the release-versioning skill's rules for skills.
 - Quote every frontmatter string value. Keys stay unquoted.
 - No em dashes, and no semicolons used to join what should be separate sentences. Use commas, periods, parentheses, or "to".
 - Capitalized bullets, parallel phrasing.
 
 ## Where edits come from
 
-- Most edits to this skill begin with something the user saw in a visible review line: a false positive to narrow, or a miss to add. Treat each as a detection to sharpen, stated as a category of failure, and keep the review line format stable so the user keeps seeing what fired.
+- Most edits to this skill begin with something the user saw in a visible review table: a false positive to narrow, or a miss to add. Treat each as a detection to sharpen, stated as a category of failure, and keep the review table format stable so the user keeps seeing what fired.
 - Detections stay textual. This skill is judgment an agent applies while writing, never a script, a linter, or a tool, because the failures it hunts are ones a rule cannot express.
 - Never soften the skill's voice or narrow its trigger to reduce how often it fires. Wide triggering is the point.
 
@@ -31,5 +32,5 @@ Rules for editing this skill. User-facing guidance lives in `SKILL.md`. `README.
 
 - No real proper noun snuck into `SKILL.md` or `README.md`.
 - No named bad example survives outside "Compact Anti-Examples", which is already framed as abstract pattern categories rather than copyable labels.
-- `metadata.version` bumped if and only if behavior or coverage changed.
+- `metadata.version` bumped as the release-versioning skill requires.
 - `README.md` matches the actual file layout.

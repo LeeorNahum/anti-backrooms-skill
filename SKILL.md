@@ -3,7 +3,7 @@ name: "anti-backrooms"
 description: "Use whenever anything is written, edited, named, or shown that a person or another agent will read or look at, including every visual, spatial, or printed artifact and equally the surfaces that do not look like design work: comments, commit messages, names, reusable instructions, and the prose beside configuration. Apply while composing, not only when a critique is asked for. It catches output that is locally plausible but globally wrong, the coherent-but-wrong failures that violate human normalcy: filler wording, claims stronger than their evidence, wrong scale, impossible adjacency, unreadable hierarchy, meaningless repetition, the same fact shown twice, a context leak of internal material or session evidence, a generic artifact shaped by one person, and a viewer with no path through it."
 metadata:
   author: "Leeor Nahum"
-  version: "1.8.0"
+  version: "1.9.0"
 ---
 
 # Anti-Backrooms
@@ -46,23 +46,43 @@ Inspect every artifact through these lenses:
 - **Boundary discipline:** What internal or meta information must stay out?
 - **Physical plausibility:** If this exists in real space, does it work in real space?
 
+## Validating A Suspicion
+
+The failure modes below say what to look for. These say how to confirm it, because the common error is not missing a defect, it is seeing the defect and deriving the wrong reason, which produces a fix that preserves it.
+
+- **Attribution test.** Point at an element and ask who wrote it, then ask who the viewer will believe wrote it. Any mismatch is a misrepresentation, no matter how accurate or helpful the element is on its own. This is the test most often skipped, because true and useful text does not feel like a defect.
+- **Deletion test.** Remove it and read again. If nothing is lost, it never earned its place. If something is lost, it belongs, though possibly not here.
+- **Paraphrase test.** State the whole surface in one sentence without looking at it. What you cannot recall was not communicated. What you invent to make it cohere is a gap the artifact left you to fill.
+- **Second-encounter test.** Read it as someone on their fiftieth visit. Being helpful on first view does not entitle anything to permanent space. This test is real but ranks below the ones above, so do not let it become the diagnosis for a defect that is actually a misrepresentation.
+- **Mechanism before fix.** Name why it fails before proposing what to change. A fix aimed at the wrong mechanism looks like a resolution and keeps the defect: relocating, restyling, or conditionally hiding something that should not exist at all is the usual shape.
+
+Rank findings by what they cost the viewer, not by how visible they are:
+
+1. It makes the viewer believe something false.
+2. It stops the viewer from knowing what to do next.
+3. It wastes the viewer's attention.
+
+A falsehood outranks any amount of redundancy or clutter, even when the redundancy is more obvious at a glance.
+
 ## Failure Modes To Hunt
 
 - **Local realism, global nonsense:** individual pieces look fine, but the whole artifact has no convincing path or reason.
 - **Semantic plausibility, actual nonsense:** each sentence sounds polished in isolation, but the combined message is contradictory, vague, unsupported, or impossible to paraphrase plainly.
 - **Text-shaped filler:** headings, labels, captions, or body copy occupy expected slots without communicating information the audience needs.
 - **Claim drift:** conclusions become stronger or more specific than the evidence, chart, source, or surrounding text supports.
+- **Shadowless confidence:** every claim lands at the same certainty, nothing is conceded, no limit is named, and no tradeoff survives into the final text. Uniform assertion reads as unexamined rather than strong, and a reader who finds the first unacknowledged weakness stops trusting everything around it. Real work has visible seams. Name the artifact's real limits inside it, placed where a skeptical reader would first start doubting it.
 - **Wrong scale:** the artifact ignores projection distance, print size, screen size, touch targets, or sightlines.
 - **Impossible adjacency:** elements sit together because the model can place them there, not because a user expects them there.
 - **Meta leakage:** placeholders, repo terms, process labels, or internal planning language leak into the final artifact.
 - **Context suction:** nearby but irrelevant context contaminates wording, structure, or aesthetics.
 - **Context leak:** the plain name for meta leakage and context suction together: a piece of the prompt, the research, the plan, or the session ends up inside an artifact where it does not belong.
+- **Default-aesthetic adoption:** the artifact wears whatever house style the generating tools converge on, so it reads as machine-made before a viewer processes a single word. The components are competent and the palette is coherent, and that is the problem: it is the coherence of a default rather than of a decision. The tell is not ugliness, it is recognizability. Choose the direction the subject, audience, and medium justify, and ask what they would have looked like if those defaults had not been reachable.
 - **Repetition without meaning:** repeated cards, sections, slides, phrases, or visual moves add noise instead of clarity.
 - **Inert fact:** a field, value, or card is shown that the viewer can neither act on nor needs to know right now, present only because the data existed and a slot was available. If removing it costs the viewer nothing, it should not have been shown.
-- **Duplicate truth:** the same fact is rendered twice on one screen in two different words or components, beside itself in one header row or repeated from the header inside a nested panel, so the viewer scans past what looks like new information and finds the same fact again. Adjacent duplicates hide best: two differently styled chips inches apart read as two facts.
+- **Duplicate truth:** the same fact is rendered twice on one screen in two different words or components, beside itself in one header row or repeated from the header inside a nested panel, so the viewer scans past what looks like new information and finds the same fact again. Adjacent duplicates hide best: the same fact in two different styles reads as two facts. Show a fact exactly once, at the level where it is first noticed, and let a nested view show only what is new.
 - **Human-path failure:** a person moving through the artifact would not know where to look, what to do, or when the story ends.
-- **Proper-noun leakage:** real names, project names, repo names, source labels, or personal context appear where a generic artifact should use placeholders or audience-facing language.
-- **Audience of one:** a generic artifact or a product default takes its shape from the one person in the room, their vocabulary, habits, machine, or the single sample at hand, so something meant for everyone is quietly tuned to its author or its first user. Nothing is named, which is why it hides better than proper-noun leakage. The test is whether the result would be the same if a different person had asked.
+- **Proper-noun leakage:** real names, project names, repo names, local paths, source labels, or personal context appear where a generic artifact should use placeholders, audience-facing language, or nothing. Keep an identity only when it is truly part of the audience-facing artifact.
+- **Audience of one:** a generic artifact or a product default takes its shape from the one person in the room, their vocabulary, habits, machine, or the single sample at hand, so something meant for everyone is quietly tuned to its author or its first user. Nothing is named, which is why it hides better than proper-noun leakage. The test is whether the result would be the same if a different person had asked. When it would not, decide again from the audience the artifact claims, and keep the author's case as one data point.
 - **Purpose assumption:** copy, a setting, or an explanation describes what the reader will do with the output or where it will go, when the artifact cannot know. Say what the thing does and stop.
 - **Evidence residue:** a durable, reusable artifact carries the dates, measurements, timings, incident story, or session trace from the moment it was edited. The rule belongs in the artifact. The evidence belongs in the change record or the project that found it.
 - **Frame-escaped encoding:** text prepared for one rendering frame is shown in another with its escaping intact, entities, markup, or fences appearing as characters, so the reader sees the encoding instead of the content.
@@ -73,6 +93,9 @@ Inspect every artifact through these lenses:
 - **Contract-instance enumeration:** a description states a general capability, then lists specific cases the general statement already covers. The list carries no new information and quietly narrows the reader to the named cases. State the contract and its real boundaries, never examples of what it already includes.
 - **False breadth:** a surface presented as general, such as a universal verb, label, field, or component, names a specific product, place, file, format, or vendor it merely happens to serve, so the generic promise collapses to one context. Keep a general surface general. The specific case belongs where that context is owned.
 - **Maintainer residue:** build, sync, versioning, or editing instructions for the artifact live inside the copy the audience consumes, instead of a separate maintainer layer.
+- **Narrated content:** a surface that renders someone's own content, a file, a document, a record, a quote, an import preview, carries the product's commentary inside the rendering. The reader reasonably believes everything inside that frame came from their content, so an explanation, a caption, a tip, or an aside placed there silently misrepresents what their content says. A rendering of content shows the content and nothing else. If the product must say something about it, that belongs outside the frame, and the frame's edge must be obvious enough that the reader can tell which is which. This one hides well: the added line is usually true, usually helpful, and still wrong.
+- **Layout-shifting reveal:** a disclosure moves surrounding items enough that the reader loses their place or next target. Keep the reading position stable, or open an accessible detail view. A reveal must remain usable with touch and a keyboard.
+- **Placeholder in a different unit:** a value arrives late and something else occupies its slot in the meantime, in a different unit or meaning, so the reader sees one fact replaced by another and cannot tell which was real. Reserve the space and show nothing, or show the same measure imprecisely. Never let a number change what it is measuring under the reader's eye.
 
 ## Backrooms Mapping
 
@@ -83,7 +106,7 @@ Use these mappings while composing, not only after:
 - **Endless hum-buzz:** helper text, badges, labels, footnotes, and low-value explanations create ambient noise. Make the artifact quieter so the signal dominates.
 - **Non-Euclidean geometry:** the order is locally navigable but globally wrong. The artifact seems to conclude, then restarts. Main story and appendix bleed together, and diagrams read in loops. Reset the path.
 - **Wrong scale:** text, whitespace, diagrams, controls, or physical placements are sized for the canvas, not the real viewer, room, print, device, or hand.
-- **Duplication / replacement:** sections repeat the same beat with slightly different wording, or cloned modules drift without reason. A copy that imitates a real element but comes out subtly malformed is worse than none. Collapse duplicates, give each repeated structure a distinct job, and make a near-copy either the real thing or gone.
+- **Duplication / replacement:** cloned modules drift without reason, or a copy imitates a real element but comes out subtly malformed, which is worse than none. Give each repeated structure a distinct job, and make a near-copy either the real thing or gone.
 - **Observer effect:** the artifact survives a static skim but breaks when you imagine actually using it. Simulate the real interaction sequence, not just the screenshot.
 - **Memory of a memory:** the artifact is assembled from a degraded copy of a copy rather than the real source, an echo reproduced from imperfect or compacted recall, so it feels familiar but is subtly wrong throughout. Rebuild from the true source, not from a remembered version of it.
 - **Doorless entry:** a view, modal, toast, or state appears with no designed way in, as if the user fell into it through a wall. Give every screen and overlay an intentional, explainable trigger, and remove any that surface for no reason.
@@ -109,13 +132,11 @@ When this skill is active:
 - Prefer deleting weak or suspicious elements over defending them
 - If a choice feels arbitrary, ask what user, task, or space constraint justifies it
 - If a label smells internal, remove it or ask before shipping it
-- If a generic artifact contains a real person's name, repo name, local path, chat artifact, or source-specific proper noun, remove it unless that identity is truly part of the audience-facing artifact
 - Do not mention bad or deprecated examples inside the final artifact unless the artifact is explicitly a critique or training guide where the example is needed
 - Verify readability in the real medium instead of assuming it from the canvas
 - Keep mainline narrative separate from appendix or reference material
 - Keep instructions for maintaining the artifact out of the copy the audience consumes
 - If something only works because the viewer already knows the backstory, it is not solved
-- If a generic artifact's shape was decided from one person's traits, one machine, or one sample, say so and decide again from the audience it claims
 - Treat a comment, a commit message, a name, a reply, and a reusable instruction as artifacts with an audience, and hold them to the same checks
 
 ## Correction Patterns
@@ -170,13 +191,11 @@ Think a few moves ahead. Avoid constructing a maze that technically connects but
 - Prefer clear, specific language over fluent filler or ambiguous abstraction
 - Verify that the text says what the artifact appears to claim and that the available evidence supports it
 - Remove meta text, planning residue, and environmental contamination
-- Replace leaked real-world names and local context with placeholders, audience-facing labels, or nothing
 - Describe categories of bad patterns instead of naming bad examples that could become anchors
 - Use examples to show shape or structure, and signal that the reader chooses the accurate specifics for their own case
 - Describe a capability by its contract and its real limits, never by enumerating instances the general statement already covers
 - Keep a surface meant to be general free of any specific product, place, file, or format it merely happens to serve
 - Remove a fact the viewer cannot act on and does not need to decide anything
-- Show a fact exactly once, at the level where it is first noticed, and let a nested view show only what is new
 - Ask the user when a suspicious choice could be intentional but cannot be justified confidently
 
 ## Compact Anti-Examples
@@ -196,9 +215,7 @@ These are pattern categories, not labels to copy into final artifacts:
 - Physical table, booth, or sign is composed like a flat screen -> design from real sightlines, approach, reach, and crowd behavior.
 - A general capability's description enumerates cases it already covers -> state the contract and its limits, and drop the list.
 - A surface meant to be universal names one product, place, file, or format it serves -> use general language, and move the specific case to the context that owns it.
-- A settings panel shows a raw API host or endpoint URL nobody will type or act on -> drop it, or fold it into the one control that uses it (an "open" link), not display it as a fact.
-- A status already shown in the page header is repeated inside a nested panel below it -> show it once, where it is first noticed, and let the nested panel show only what is new.
-- A product default or a generic rule is chosen from how its author speaks, works, or is set up -> decide from the audience the artifact claims, and keep the author's case as one data point.
+- A raw technical value nobody will type or act on is displayed as a fact -> drop it, or fold it into the one control that uses it.
 - A line of copy tells the reader what they will do with the result -> say what the control or the text does, and stop.
 - A reusable instruction records when, how, or by how much it was last found wrong -> keep the rule, move the evidence to the change record.
 
@@ -207,6 +224,8 @@ These are pattern categories, not labels to copy into final artifacts:
 When in doubt, ask:
 
 - Is this artifact intentional, or does it feel averaged?
+- Would it look like this if the tools' defaults had not been reachable?
+- Does it concede anything anywhere, or does every claim land at the same certainty?
 - Does anything belong to the process more than the audience?
 - Does the artifact already know where it should end?
 - Is any important element only working because I am zoomed in or because I know hidden context?
@@ -216,26 +235,15 @@ When in doubt, ask:
 - Do the claims, examples, labels, and evidence agree with one another?
 - Would this be the same if a different person had asked for it, on a different machine, from a different sample?
 
-## Response Format
-
-Use this structure when reviewing or self-checking:
-
-- `Artifact`: what is being made or reviewed
-- `Audience + context`: who sees it, where, and at what scale
-- `Primary path`: what should be noticed first, next, and last
-- `Findings`: highest-value issues first
-- `Fixes`: concrete changes that restore coherence
-- `Open questions`: only when intent is ambiguous
-
-For each finding, prefer this shape:
-
-- `Symptom`
-- `Why it fails`
-- `Fix`
-
 ## Say What It Did
 
-Whenever this skill changes something, or finds something it could not fix, say so where the user can see it: a line that begins `Anti-backrooms review:` followed by one line per finding, what it was and what changed, or what still needs the user. Stay silent when composing and nothing was found. When a review was explicitly asked for and nothing was found, say that in the same form. The user can then see that the skill fired, judge each finding, and correct a false positive in one reply.
+Whenever this skill changes something, or finds something it could not fix, say so where the user can see it: the label `Anti-backrooms review`, then one table with the highest-value finding first.
+
+| Finding | Change | Needs user |
+| --- | --- | --- |
+| <symptom, its mechanism, and why it fails> | <the fix made, or `none`> | <what the user must decide, or `no`> |
+
+For an explicitly requested review, open with one line naming the artifact, its audience and viewing context, and the primary path. Stay silent when composing and nothing was found. When a review was explicitly asked for and nothing was found, show the table with one row reading `none`. The user can then see that the skill fired, judge each finding, and correct a false positive in one reply.
 
 ## Escalation Rule
 
