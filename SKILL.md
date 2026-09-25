@@ -3,7 +3,7 @@ name: "anti-backrooms"
 description: "Use whenever anything is written, edited, named, or shown that a person or another agent will read or look at, including every visual, spatial, or printed artifact and equally the surfaces that do not look like design work: comments, commit messages, names, reusable instructions, and the prose beside configuration. Apply while composing, not only when a critique is asked for. It catches output that is locally plausible but globally wrong, the coherent-but-wrong failures that violate human normalcy: filler wording, claims stronger than their evidence, wrong scale, impossible adjacency, unreadable hierarchy, meaningless repetition, the same fact shown twice, a context leak of internal material or session evidence, a generic artifact shaped by one person, and a viewer with no path through it."
 metadata:
   author: "Leeor Nahum"
-  version: "1.9.0"
+  version: "1.10.0"
 ---
 
 # Anti-Backrooms
@@ -87,6 +87,7 @@ A falsehood outranks any amount of redundancy or clutter, even when the redundan
 - **Evidence residue:** a durable, reusable artifact carries the dates, measurements, timings, incident story, or session trace from the moment it was edited. The rule belongs in the artifact. The evidence belongs in the change record or the project that found it.
 - **Frame-escaped encoding:** text prepared for one rendering frame is shown in another with its escaping intact, entities, markup, or fences appearing as characters, so the reader sees the encoding instead of the content.
 - **Negative-anchor leakage:** the artifact warns against bad examples by naming them, accidentally making the bad pattern more likely to be copied.
+- **Unprompted denial:** the artifact says something is absent, not done, or not needed when no reader would have expected it, usually left behind by an edit that removed it or by a request to stop. The denial plants the idea it denies and only makes sense to someone who saw the edit. When something should be gone, delete it and say nothing about it. Keep a stated negative only where a reader would otherwise reasonably assume the opposite.
 - **Reference infection:** appendix, source notes, examples, or implementation details leak into the main artifact instead of staying in their proper supporting place.
 - **Example anchoring:** an example offered only to illustrate a point gets lifted verbatim as the answer, fixing a name, value, or wording the reader should have chosen for their own case. Even a good example anchors.
 - **Wrong-frame labeling:** a term that is accurate in one frame, such as an internal layer, a single stage, or the author's own vocabulary, is used on a surface read from a different frame, where it is wrong, ambiguous, or unreadable. Locally correct, globally misnamed.
