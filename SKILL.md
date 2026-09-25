@@ -3,7 +3,7 @@ name: "anti-backrooms"
 description: "Use whenever anything is written, edited, named, or shown that a person or another agent will read or look at, including every visual, spatial, or printed artifact and equally the surfaces that do not look like design work: comments, commit messages, names, reusable instructions, and the prose beside configuration. Apply while composing, not only when a critique is asked for. It catches output that is locally plausible but globally wrong, the coherent-but-wrong failures that violate human normalcy: filler wording, claims stronger than their evidence, wrong scale, impossible adjacency, unreadable hierarchy, meaningless repetition, the same fact shown twice, a context leak of internal material or session evidence, a generic artifact shaped by one person, and a viewer with no path through it."
 metadata:
   author: "Leeor Nahum"
-  version: "1.10.0"
+  version: "1.11.0"
 ---
 
 # Anti-Backrooms
@@ -24,12 +24,15 @@ The Backrooms metaphor works because the space is familiar but not placeable. Ob
 
 That is exactly how many AI artifacts fail: correct local syntax with wrong global intent, valid components with invalid composition, reasonable words with unreasonable placement, polished visuals with no believable human path, and internal context accidentally sucked into the public artifact.
 
-## Quick Start
+## Workflow
+
+Apply this while composing, not only after. Think a few moves ahead and do not postpone obvious contradictions. Avoid constructing a maze that technically connects but should never have existed in that shape.
 
 1. Identify the artifact, audience, intended meaning, and real viewing context.
 2. Decide the primary viewer path: what should be noticed first, next, and last.
 3. Run the core checks and failure modes below.
-4. Fix structure before polishing style.
+4. Fix structure before polishing style, with the smallest structural fixes that restore coherence.
+5. If a suspicious choice could be intentional but cannot be justified confidently, ask the user.
 
 ## Core Checks
 
@@ -67,29 +70,29 @@ A falsehood outranks any amount of redundancy or clutter, even when the redundan
 ## Failure Modes To Hunt
 
 - **Local realism, global nonsense:** individual pieces look fine, but the whole artifact has no convincing path or reason.
-- **Semantic plausibility, actual nonsense:** each sentence sounds polished in isolation, but the combined message is contradictory, vague, unsupported, or impossible to paraphrase plainly.
-- **Text-shaped filler:** headings, labels, captions, or body copy occupy expected slots without communicating information the audience needs.
+- **Semantic plausibility, actual nonsense:** each sentence sounds polished in isolation, but the combined message is contradictory, vague, unsupported, or impossible to paraphrase plainly. State the intended point plainly, then keep only the text that supports it.
+- **Text-shaped filler:** headings, labels, captions, or body copy occupy expected slots without communicating information the audience needs. Replace them with specific audience-facing information, or delete them. A heading that promises one topic over a body about another gets the label and the content aligned around the reader's actual question.
 - **Claim drift:** conclusions become stronger or more specific than the evidence, chart, source, or surrounding text supports.
 - **Shadowless confidence:** every claim lands at the same certainty, nothing is conceded, no limit is named, and no tradeoff survives into the final text. Uniform assertion reads as unexamined rather than strong, and a reader who finds the first unacknowledged weakness stops trusting everything around it. Real work has visible seams. Name the artifact's real limits inside it, placed where a skeptical reader would first start doubting it.
-- **Wrong scale:** the artifact ignores projection distance, print size, screen size, touch targets, or sightlines.
+- **Wrong scale:** text, whitespace, diagrams, controls, or physical placements are sized for the canvas, not for the real projection distance, print size, screen, touch target, sightline, or hand. Verify readability in the real medium instead of assuming it from the canvas.
 - **Impossible adjacency:** elements sit together because the model can place them there, not because a user expects them there.
-- **Meta leakage:** placeholders, repo terms, process labels, or internal planning language leak into the final artifact.
+- **Meta leakage:** placeholders, scaffolding, repo terms, process labels, builder language, or internal planning language leak into the final artifact. Replace them with a real title, product label, audience-facing language, or nothing.
 - **Context suction:** nearby but irrelevant context contaminates wording, structure, or aesthetics.
 - **Context leak:** the plain name for meta leakage and context suction together: a piece of the prompt, the research, the plan, or the session ends up inside an artifact where it does not belong.
 - **Default-aesthetic adoption:** the artifact wears whatever house style the generating tools converge on, so it reads as machine-made before a viewer processes a single word. The components are competent and the palette is coherent, and that is the problem: it is the coherence of a default rather than of a decision. The tell is not ugliness, it is recognizability. Choose the direction the subject, audience, and medium justify, and ask what they would have looked like if those defaults had not been reachable.
-- **Repetition without meaning:** repeated cards, sections, slides, phrases, or visual moves add noise instead of clarity.
-- **Inert fact:** a field, value, or card is shown that the viewer can neither act on nor needs to know right now, present only because the data existed and a slot was available. If removing it costs the viewer nothing, it should not have been shown.
+- **Repetition without meaning:** repeated cards, sections, slides, phrases, wording rhythms, or visual moves add noise instead of clarity, the mono-yellow sameness of a space that is consistent but dead. Where sections say minor variants of one idea, keep the strongest statement and one proof. Elsewhere keep the consistency, but add deliberate hierarchy and variation where it clarifies meaning.
+- **Inert fact:** a field, value, or card is shown that the viewer can neither act on nor needs to know right now, present only because the data existed and a slot was available. If removing it costs the viewer nothing, it should not have been shown. A raw value that only one control uses belongs folded into that control.
 - **Duplicate truth:** the same fact is rendered twice on one screen in two different words or components, beside itself in one header row or repeated from the header inside a nested panel, so the viewer scans past what looks like new information and finds the same fact again. Adjacent duplicates hide best: the same fact in two different styles reads as two facts. Show a fact exactly once, at the level where it is first noticed, and let a nested view show only what is new.
-- **Human-path failure:** a person moving through the artifact would not know where to look, what to do, or when the story ends.
+- **Human-path failure:** a person moving through the artifact would not know where to look, what to do, or when the story ends. Give it one primary path, and give a diagram an explicit start, direction, hierarchy, and traversal order.
 - **Proper-noun leakage:** real names, project names, repo names, local paths, source labels, or personal context appear where a generic artifact should use placeholders, audience-facing language, or nothing. Keep an identity only when it is truly part of the audience-facing artifact.
 - **Audience of one:** a generic artifact or a product default takes its shape from the one person in the room, their vocabulary, habits, machine, or the single sample at hand, so something meant for everyone is quietly tuned to its author or its first user. Nothing is named, which is why it hides better than proper-noun leakage. The test is whether the result would be the same if a different person had asked. When it would not, decide again from the audience the artifact claims, and keep the author's case as one data point.
 - **Purpose assumption:** copy, a setting, or an explanation describes what the reader will do with the output or where it will go, when the artifact cannot know. Say what the thing does and stop.
 - **Evidence residue:** a durable, reusable artifact carries the dates, measurements, timings, incident story, or session trace from the moment it was edited. The rule belongs in the artifact. The evidence belongs in the change record or the project that found it.
 - **Frame-escaped encoding:** text prepared for one rendering frame is shown in another with its escaping intact, entities, markup, or fences appearing as characters, so the reader sees the encoding instead of the content.
-- **Negative-anchor leakage:** the artifact warns against bad examples by naming them, accidentally making the bad pattern more likely to be copied.
+- **Negative-anchor leakage:** the artifact warns against bad examples by naming them, accidentally making the bad pattern more likely to be copied. Describe the category of bad pattern instead, and name an example only when the artifact is explicitly a critique or training guide that needs it.
 - **Unprompted denial:** the artifact says something is absent, not done, or not needed when no reader would have expected it, usually left behind by an edit that removed it or by a request to stop. The denial plants the idea it denies and only makes sense to someone who saw the edit. When something should be gone, delete it and say nothing about it. Keep a stated negative only where a reader would otherwise reasonably assume the opposite.
 - **Reference infection:** appendix, source notes, examples, or implementation details leak into the main artifact instead of staying in their proper supporting place.
-- **Example anchoring:** an example offered only to illustrate a point gets lifted verbatim as the answer, fixing a name, value, or wording the reader should have chosen for their own case. Even a good example anchors.
+- **Example anchoring:** an example offered only to illustrate a point gets lifted verbatim as the answer, fixing a name, value, or wording the reader should have chosen for their own case. Even a good example anchors. Use an example to show shape or structure, and signal that the reader chooses the accurate specifics.
 - **Wrong-frame labeling:** a term that is accurate in one frame, such as an internal layer, a single stage, or the author's own vocabulary, is used on a surface read from a different frame, where it is wrong, ambiguous, or unreadable. Locally correct, globally misnamed.
 - **Contract-instance enumeration:** a description states a general capability, then lists specific cases the general statement already covers. The list carries no new information and quietly narrows the reader to the named cases. State the contract and its real boundaries, never examples of what it already includes.
 - **False breadth:** a surface presented as general, such as a universal verb, label, field, or component, names a specific product, place, file, format, or vendor it merely happens to serve, so the generic promise collapses to one context. Keep a general surface general. The specific case belongs where that context is owned.
@@ -100,13 +103,11 @@ A falsehood outranks any amount of redundancy or clutter, even when the redundan
 
 ## Backrooms Mapping
 
-Use these mappings while composing, not only after:
+Each Backrooms trait has an artifact form:
 
-- **Randomly segmented rooms:** sections, cards, folders, slides, or dividers exist because artifacts often have them, not because they create a decision, proof, or transition. Merge or delete segments that do not earn their place.
-- **Mono-yellow sameness:** repeated cards, wording rhythms, UI blocks, or visual moves are consistent but dead. Keep consistency, but add deliberate hierarchy and variation where it clarifies meaning.
+- **Randomly segmented rooms:** sections, cards, folders, slides, or dividers exist because artifacts often have them, not because they create a decision, proof, or transition. Merge or delete segments that do not earn their place, and organize what remains around the reader's decisions, tasks, and proofs rather than a generic section inventory.
 - **Endless hum-buzz:** helper text, badges, labels, footnotes, and low-value explanations create ambient noise. Make the artifact quieter so the signal dominates.
 - **Non-Euclidean geometry:** the order is locally navigable but globally wrong. The artifact seems to conclude, then restarts. Main story and appendix bleed together, and diagrams read in loops. Reset the path.
-- **Wrong scale:** text, whitespace, diagrams, controls, or physical placements are sized for the canvas, not the real viewer, room, print, device, or hand.
 - **Duplication / replacement:** cloned modules drift without reason, or a copy imitates a real element but comes out subtly malformed, which is worse than none. Give each repeated structure a distinct job, and make a near-copy either the real thing or gone.
 - **Observer effect:** the artifact survives a static skim but breaks when you imagine actually using it. Simulate the real interaction sequence, not just the screenshot.
 - **Memory of a memory:** the artifact is assembled from a degraded copy of a copy rather than the real source, an echo reproduced from imperfect or compacted recall, so it feels familiar but is subtly wrong throughout. Rebuild from the true source, not from a remembered version of it.
@@ -118,27 +119,16 @@ Use these mappings while composing, not only after:
 Catch these before they harden:
 
 - **Surface-first design:** polished visuals, gradients, cards, or diagrams cover weak hierarchy or weak content strategy.
-- **Placeholder logic shipped as real logic:** scaffolding, generic headings, process notes, or builder language survive into the final artifact.
 - **Good-enough-for-now maze-making:** a shaky structure gets decorated instead of reset. If the maze is wrong, do not decorate it. Rebuild the maze.
-- **Context contamination:** the artifact inherits terminology, proper nouns, structure, or aesthetics from nearby context that does not belong to the audience-facing result.
 
 ## Default Behaviors
 
 When this skill is active:
 
-- Think ahead while composing. Do not postpone obvious contradictions
-- Read text for meaning, not just grammar. Make sure adjacent statements agree and the full message can be paraphrased plainly
-- Replace fluent but empty wording with specific audience-facing information
-- Keep claims proportionate to the evidence shown
 - Prefer deleting weak or suspicious elements over defending them
 - If a choice feels arbitrary, ask what user, task, or space constraint justifies it
-- If a label smells internal, remove it or ask before shipping it
-- Do not mention bad or deprecated examples inside the final artifact unless the artifact is explicitly a critique or training guide where the example is needed
-- Verify readability in the real medium instead of assuming it from the canvas
-- Keep mainline narrative separate from appendix or reference material
-- Keep instructions for maintaining the artifact out of the copy the audience consumes
+- Choose fewer, stronger visual moves
 - If something only works because the viewer already knows the backstory, it is not solved
-- Treat a comment, a commit message, a name, a reply, and a reusable instruction as artifacts with an audience, and hold them to the same checks
 
 ## Correction Patterns
 
@@ -160,8 +150,6 @@ When content feels contaminated or generic, re-ground in audience:
 
 - Identify the real audience
 - Remove anything they would never need to see
-- Replace process labels with audience-relevant language
-- Rewrite any sentence that cannot be paraphrased clearly or tied to a concrete purpose
 - Check that headings, labels, examples, and conclusions agree with the body and with each other
 
 When repetition or decorative noise takes over, re-ground in purpose:
@@ -170,71 +158,21 @@ When repetition or decorative noise takes over, re-ground in purpose:
 - Justify every section against that job
 - Delete anything whose role cannot be defended quickly
 
-## Review Workflow
-
-1. State the artifact, audience, and viewing context.
-2. Identify the intended primary path for the viewer.
-3. List the highest-risk Backrooms failures.
-4. Propose the smallest structural fixes that restore coherence.
-5. If a suspicious choice could be intentional but cannot be justified confidently, ask the user.
-
-For generation tasks, apply this during composition, not only after. If the skeleton is wrong, restart before adding detail.
-
-Think a few moves ahead. Avoid constructing a maze that technically connects but should never have existed in that shape.
-
-## Good Antidotes
-
-- Pick one clear primary path for the viewer
-- Choose fewer, stronger visual moves
-- Size for the real viewing context, not the canvas
-- Separate main narrative from reference material
-- Replace generic repetition with explicit information hierarchy
-- Prefer clear, specific language over fluent filler or ambiguous abstraction
-- Verify that the text says what the artifact appears to claim and that the available evidence supports it
-- Remove meta text, planning residue, and environmental contamination
-- Describe categories of bad patterns instead of naming bad examples that could become anchors
-- Use examples to show shape or structure, and signal that the reader chooses the accurate specifics for their own case
-- Describe a capability by its contract and its real limits, never by enumerating instances the general statement already covers
-- Keep a surface meant to be general free of any specific product, place, file, or format it merely happens to serve
-- Remove a fact the viewer cannot act on and does not need to decide anything
-- Ask the user when a suspicious choice could be intentional but cannot be justified confidently
-
 ## Compact Anti-Examples
 
 These are pattern categories, not labels to copy into final artifacts:
 
-- Public artifact shows process labels instead of audience-facing meaning -> replace with a real title, product label, or nothing.
-- Presentation works only from laptop distance -> simplify until it survives the actual room, projector, or print size.
-- Deck or page reaches its natural ending, then keeps going as mainline content -> close cleanly and move extra material to appendix/reference.
-- Multiple sections say minor variants of the same idea -> keep the strongest statement and one proof.
 - QR code, product photo, CTA, prototype, and logo all compete equally -> choose one focal anchor and demote the rest.
-- Chart is visually elegant but does not support the claim -> fix narrative honesty before style.
-- Paragraphs are individually fluent but do not add up to one defensible message -> state the intended point plainly, then keep only text that supports it.
-- Heading promises one topic while the body discusses another -> align the label and content around the audience's actual question.
-- Document has generic section inventory instead of information architecture -> organize around decisions, tasks, proofs, and audience needs.
-- Flow diagram has correct nodes but no reading order -> add explicit start, direction, hierarchy, and traversal path.
 - Physical table, booth, or sign is composed like a flat screen -> design from real sightlines, approach, reach, and crowd behavior.
-- A general capability's description enumerates cases it already covers -> state the contract and its limits, and drop the list.
-- A surface meant to be universal names one product, place, file, or format it serves -> use general language, and move the specific case to the context that owns it.
-- A raw technical value nobody will type or act on is displayed as a fact -> drop it, or fold it into the one control that uses it.
-- A line of copy tells the reader what they will do with the result -> say what the control or the text does, and stop.
-- A reusable instruction records when, how, or by how much it was last found wrong -> keep the rule, move the evidence to the change record.
 
 ## Fast Review Prompt
 
 When in doubt, ask:
 
 - Is this artifact intentional, or does it feel averaged?
-- Would it look like this if the tools' defaults had not been reachable?
-- Does it concede anything anywhere, or does every claim land at the same certainty?
-- Does anything belong to the process more than the audience?
 - Does the artifact already know where it should end?
-- Is any important element only working because I am zoomed in or because I know hidden context?
+- Is any important element only working because I am zoomed in?
 - If a stranger walked into this with no backstory, would it still feel coherent?
-- Does every name read correctly from the viewer's frame, not just the author's?
-- Can the main message be paraphrased plainly without inventing missing logic?
-- Do the claims, examples, labels, and evidence agree with one another?
-- Would this be the same if a different person had asked for it, on a different machine, from a different sample?
 
 ## Say What It Did
 

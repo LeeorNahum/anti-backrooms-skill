@@ -15,7 +15,7 @@ Rules for editing this skill. User-facing guidance lives in `SKILL.md`. `README.
 - Keep it generic and placeholder-only. No real product, vendor, project, repo, file, or path names belong in `SKILL.md` or `README.md`. This is a methodology, not tied to any one codebase.
 - Describe categories of failure, never named bad examples. A quoted bad example is itself a negative anchor, the exact violation this skill hunts. State the pattern abstractly so it cannot be copied.
 - Keep `SKILL.md` direct and short. Prefer deleting a line over softening it, and prefer the smallest edit in an existing section over a new section, since redundant sections are a failure this skill hunts.
-- State each failure once, in Failure Modes To Hunt, with its fix. Default Behaviors, Good Antidotes, and Compact Anti-Examples add what that statement lacks, never an echo of it.
+- State each failure once, in Failure Modes To Hunt, with its fix. Every other section adds what that statement lacks, never an echo of it.
 - Preserve the high-signal wording and the Backrooms metaphor. Do not flatten distinctive language into generic process language.
 - Bump `metadata.version` by the release-versioning skill's rules for skills.
 - Quote every frontmatter string value. Keys stay unquoted.
