@@ -1,9 +1,9 @@
 ---
 name: "anti-backrooms"
-description: "Use whenever anything is written, edited, named, or shown that a person or another agent will read or look at, including every visual, spatial, or printed artifact and equally the surfaces that do not look like design work: comments, commit messages, names, reusable instructions, and the prose beside configuration. Apply while composing, not only when a critique is asked for. It catches output that is locally plausible but globally wrong, the coherent-but-wrong failures that violate human normalcy: filler wording, claims stronger than their evidence, wrong scale, impossible adjacency, unreadable hierarchy, meaningless repetition, the same fact shown twice, a context leak of internal material or session evidence, a generic artifact shaped by one person, and a viewer with no path through it."
+description: "Use whenever anything is written, edited, named, or shown that a person or another agent will read or look at, including every visual, spatial, or printed artifact and equally the surfaces that do not look like design work: comments, commit messages, names, reusable instructions, and the prose beside configuration. Apply while composing, not only when a critique is asked for, even when the task sounds like coding, configuration, or routine communication. Also use when reviewing, checking, or screenshotting anything a person or another agent will see, and whenever a result seems off, generic, machine-made, or confusing although nothing is technically broken. Catches output that is locally plausible but globally wrong, the coherent-but-wrong failures that violate human normalcy, in its wording, claims, structure, scale, audience, or rendering, or through internal or session context leaking into it."
 metadata:
   author: "Leeor Nahum"
-  version: "1.11.0"
+  version: "1.12.0"
 ---
 
 # Anti-Backrooms
@@ -28,11 +28,11 @@ That is exactly how many AI artifacts fail: correct local syntax with wrong glob
 
 Apply this while composing, not only after. Think a few moves ahead and do not postpone obvious contradictions. Avoid constructing a maze that technically connects but should never have existed in that shape.
 
-1. Identify the artifact, audience, intended meaning, and real viewing context.
+1. Identify the artifact, who will actually perceive it, its intended meaning, and the real viewing context.
 2. Decide the primary viewer path: what should be noticed first, next, and last.
 3. Run the core checks and failure modes below.
 4. Fix structure before polishing style, with the smallest structural fixes that restore coherence.
-5. If a suspicious choice could be intentional but cannot be justified confidently, ask the user.
+5. If a suspicious choice could be intentional and only the user's intent can settle it, ask the user.
 
 ## Core Checks
 
@@ -74,6 +74,7 @@ A falsehood outranks any amount of redundancy or clutter, even when the redundan
 - **Text-shaped filler:** headings, labels, captions, or body copy occupy expected slots without communicating information the audience needs. Replace them with specific audience-facing information, or delete them. A heading that promises one topic over a body about another gets the label and the content aligned around the reader's actual question.
 - **Claim drift:** conclusions become stronger or more specific than the evidence, chart, source, or surrounding text supports.
 - **Shadowless confidence:** every claim lands at the same certainty, nothing is conceded, no limit is named, and no tradeoff survives into the final text. Uniform assertion reads as unexamined rather than strong, and a reader who finds the first unacknowledged weakness stops trusting everything around it. Real work has visible seams. Name the artifact's real limits inside it, placed where a skeptical reader would first start doubting it.
+- **Off-normal rendering:** the result appears on its real surface but differs from how the same thing looks when its audience reaches it the ordinary way: a warning bar, a fallback font, a missing icon, the wrong theme. A reviewer who has never seen the normal version reads the degraded one as intended, so nothing about it feels wrong in isolation. Look at the real result, reached the way its audience reaches it, next to a known-normal one with the same content, state, and viewing conditions, and treat every unexplained difference as a finding. When no normal version is at hand, get one before judging, since a guessed normal look is the blind spot itself.
 - **Wrong scale:** text, whitespace, diagrams, controls, or physical placements are sized for the canvas, not for the real projection distance, print size, screen, touch target, sightline, or hand. Verify readability in the real medium instead of assuming it from the canvas.
 - **Impossible adjacency:** elements sit together because the model can place them there, not because a user expects them there.
 - **Meta leakage:** placeholders, scaffolding, repo terms, process labels, builder language, or internal planning language leak into the final artifact. Replace them with a real title, product label, audience-facing language, or nothing.
@@ -85,7 +86,7 @@ A falsehood outranks any amount of redundancy or clutter, even when the redundan
 - **Duplicate truth:** the same fact is rendered twice on one screen in two different words or components, beside itself in one header row or repeated from the header inside a nested panel, so the viewer scans past what looks like new information and finds the same fact again. Adjacent duplicates hide best: the same fact in two different styles reads as two facts. Show a fact exactly once, at the level where it is first noticed, and let a nested view show only what is new.
 - **Human-path failure:** a person moving through the artifact would not know where to look, what to do, or when the story ends. Give it one primary path, and give a diagram an explicit start, direction, hierarchy, and traversal order.
 - **Proper-noun leakage:** real names, project names, repo names, local paths, source labels, or personal context appear where a generic artifact should use placeholders, audience-facing language, or nothing. Keep an identity only when it is truly part of the audience-facing artifact.
-- **Audience of one:** a generic artifact or a product default takes its shape from the one person in the room, their vocabulary, habits, machine, or the single sample at hand, so something meant for everyone is quietly tuned to its author or its first user. Nothing is named, which is why it hides better than proper-noun leakage. The test is whether the result would be the same if a different person had asked. When it would not, decide again from the audience the artifact claims, and keep the author's case as one data point.
+- **Wrong audience:** the artifact is shaped for someone other than the people who will actually perceive it. Name them: the author alone, one known reader such as a professor or a client, a known group, the author plus whoever it may be passed to, or the public. Agents miss this in both directions. A generic artifact or product default quietly takes its shape from the one person in the room, their vocabulary, habits, machine, or the single sample at hand, and nothing is named, which is why it hides better than proper-noun leakage. A personal artifact gets padded with generality, hedges aimed at readers who will never see it, and support for cases nobody asked for. The test runs both ways: nothing generalizes one person's circumstances to the whole audience, and nothing is there solely for people outside it. Shape it for exactly that audience, and keep the requester's case as one data point when the requester is not the whole audience.
 - **Purpose assumption:** copy, a setting, or an explanation describes what the reader will do with the output or where it will go, when the artifact cannot know. Say what the thing does and stop.
 - **Evidence residue:** a durable, reusable artifact carries the dates, measurements, timings, incident story, or session trace from the moment it was edited. The rule belongs in the artifact. The evidence belongs in the change record or the project that found it.
 - **Frame-escaped encoding:** text prepared for one rendering frame is shown in another with its escaping intact, entities, markup, or fences appearing as characters, so the reader sees the encoding instead of the content.
@@ -128,7 +129,7 @@ When this skill is active:
 - Prefer deleting weak or suspicious elements over defending them
 - If a choice feels arbitrary, ask what user, task, or space constraint justifies it
 - Choose fewer, stronger visual moves
-- If something only works because the viewer already knows the backstory, it is not solved
+- If something only works because of backstory the real audience does not have, it is not solved
 
 ## Correction Patterns
 
@@ -172,7 +173,7 @@ When in doubt, ask:
 - Is this artifact intentional, or does it feel averaged?
 - Does the artifact already know where it should end?
 - Is any important element only working because I am zoomed in?
-- If a stranger walked into this with no backstory, would it still feel coherent?
+- If a member of the real audience walked into this with only the backstory they actually have, would it still feel coherent?
 
 ## Say What It Did
 
@@ -180,12 +181,14 @@ Whenever this skill changes something, or finds something it could not fix, say 
 
 | Finding | Change | Needs user |
 | --- | --- | --- |
-| <symptom, its mechanism, and why it fails> | <the fix made, or `none`> | <what the user must decide, or `no`> |
+| <symptom, its mechanism, and why it fails> | <the fix made, or `Recommended:` and the fix when editing is not allowed, or `none`> | <a decision only the user can make, or `no`> |
+
+A decision belongs to the user only when it turns on intent, taste, or scope they have not stated. Anything the agent can settle from the artifact, its audience, and its purpose, it settles, and when it may not edit, it writes the settled fix in the Change column. Asking the user what the agent could have decided is itself the noise this skill removes.
 
 For an explicitly requested review, open with one line naming the artifact, its audience and viewing context, and the primary path. Stay silent when composing and nothing was found. When a review was explicitly asked for and nothing was found, show the table with one row reading `none`. The user can then see that the skill fired, judge each finding, and correct a false positive in one reply.
 
 ## Escalation Rule
 
-If something feels uncanny but you cannot prove it with a single rule, do not ignore that signal. Name the suspicion clearly and either fix it or ask the user about it.
+If something feels uncanny but you cannot prove it with a single rule, do not ignore that signal. Name the suspicion clearly and investigate it. Fix what it confirms, report what stays unresolved, and ask the user only when the answer turns on their intent.
 
 "It technically fits" is not enough.
